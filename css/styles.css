@@ -72,14 +72,16 @@ body {
 
 .hidden-title {
   position: absolute;
-  white-space: nowrap;
+
   width: 1px;
   height: 1px;
+  margin: -1px;
+
+  white-space: nowrap;
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  margin: -1px;
 }
 
 .container {
@@ -98,7 +100,6 @@ body {
 /*section header*/
 .header {
   border-bottom: 1px solid var(--border-color);
-
   background-color: var(--background-white-color);
 }
 
@@ -169,6 +170,12 @@ body {
 }
 
 .ref-convert {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 
   display: flex;
   align-items: center;
@@ -182,16 +189,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--text-head-color);
   fill: var(--text-head-color);
-
   text-decoration: none;
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
 }
 
 
@@ -202,16 +200,15 @@ body {
 }
 
 .ref-mail {
-  fill: var(--text-head-color);
-  color: var(--text-head-color);
-
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
-
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+
+  fill: var(--text-head-color);
+  color: var(--text-head-color);
 }
 
 .ref-mail:hover,
@@ -229,6 +226,10 @@ body {
 }
 
 .ref-header {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+
   display: block;
   padding-top: 32px;
   padding-bottom: 31px;
@@ -239,11 +240,6 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-color);
   text-decoration: none;
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
-
 }
 
 .main-page {
@@ -259,6 +255,7 @@ body {
   display: block;
   width: 100%;
   height: 4px;
+
   background-color: var(--text-blue-color);
 }
 
@@ -273,7 +270,6 @@ body {
 
 /*section hero*/
 .hero {
-
   padding-top: 200px;
   padding-bottom: 200px;
 
@@ -286,6 +282,7 @@ body {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+
   background-image: linear-gradient(to right, var(--gradient-color), var(--gradient-color)),
     url('../images/herobackground.jpg');
   background-repeat: no-repeat;
@@ -349,28 +346,28 @@ body {
 }
 
 .button-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
   display: flex;
   width: 30px;
   height: 30px;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
   margin-top: 8px;
   margin-right: 8px;
 
+  border-radius: 50%;
   background-color: var(--background-white-color);
   border: 1px solid var(--border-close-color);
-
   cursor: pointer;
-
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .button-icon {
   width: 18px;
   height: 18px;
+
   fill: var(--text-black-color);
 }
 
@@ -436,11 +433,14 @@ body {
 }
 
 .activity-background {
+  position: absolute;
+  bottom: 3px;
+  right: 0;
 
   padding-top: 27px;
   padding-bottom: 27px;
-
   width: 370px;
+
   background-color: var(--activity-background-color);
   font-family: var(--font-roboto);
   font-size: 14px;
@@ -449,10 +449,6 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--background-white-color);
-
-  position: absolute;
-  bottom: 3px;
-  right: 0;
 }
 
 /*section our team*/
@@ -515,29 +511,26 @@ body {
 }
 
 .block-team {
-  display: block;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  transition-property: border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 
+  display: block;
   padding-left: 12px;
   padding-top: 12px;
   padding-right: 12px;
   padding-bottom: 8px;
-
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
-
-  transition-property: border-radius;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
 }
 
 .icon-twitter {
-  fill: var(--company-border);
-
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 
+  fill: var(--company-border);
 }
 
 .icon-twitter:hover,
@@ -552,11 +545,11 @@ body {
 }
 
 .icom-teaminsta {
-  fill: var(--company-border);
-
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+
+  fill: var(--company-border);
 }
 
 .icom-teaminsta:hover,
@@ -601,6 +594,13 @@ body {
 }
 
 .company-ref {
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  transition-property: border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+
   display: block;
   padding: 16px 32px;
   width: 170px;
@@ -608,14 +608,6 @@ body {
 
   border: 1px solid var(--company-border);
   border-radius: 4px;
-
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
-
-  transition-property: border-radius;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
 }
 
 .company-ref:hover {
@@ -630,11 +622,11 @@ body {
 }
 
 .icon-company {
-  fill: var(--company-border);
-
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+
+  fill: var(--company-border);
 }
 
 
@@ -670,12 +662,12 @@ body {
 }
 
 .ref-footer {
-  color: var(--foter-color);
-  text-decoration: none;
-
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+
+  color: var(--foter-color);
+  text-decoration: none;
 }
 
 .ref-footer:hover,
@@ -752,6 +744,16 @@ body {
 }
 
 .button-portfolio {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+
   padding: 6px 22px;
 
   color: var(--main-color);
@@ -762,19 +764,6 @@ body {
   letter-spacing: 0.03em;
   border-radius: 4px;
   background-color: var(--background-our-team);
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
-
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
-
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
-
 }
 
 .button-all {
@@ -785,7 +774,6 @@ body {
 .button-portfolio:focus {
   color: var(--background-white-color);
   background-color: var(--text-blue-color);
-
   box-shadow: 0px 6px 0px var(--background-our-team);
 }
 
@@ -799,14 +787,14 @@ body {
 
 
 .list-portfolio {
-
-  width: 370px;
-  background: var(--background-white-color);
-  border: 1px solid var(--item-portfolio-color);
-
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+
+  width: 370px;
+
+  background: var(--background-white-color);
+  border: 1px solid var(--item-portfolio-color);
 }
 
 .list-portfolio:hover {
@@ -819,17 +807,17 @@ body {
 }
 
 .portfolio-overlay::after {
-  content: "Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.";
-  display: block;
-
-  padding: 63px 24px;
-
   position: absolute;
-  width: 100%;
-  height: 300px;
   top: 0;
   left: 0;
+  content: "Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.";
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
 
+  display: block;
+  padding: 63px 24px;
+  width: 100%;
+  height: 300px;
 
   font-family: var(--font-roboto);
   font-size: 18px;
@@ -837,11 +825,6 @@ body {
   letter-spacing: 0.03em;
   color: var(--background-white-color);
   background-color: var(--overlay-portfolio-color);
-
-  transform: translateY(100%);
-
-  transition: transform 250ms var(--timing-function);
-  /*transition: opacity 250ms var(--timing-function);*/
 }
 
 .list-portfolio:hover .portfolio-overlay::after {
@@ -850,6 +833,7 @@ body {
 
 .group-category {
   margin: 20px 24px;
+
   border: 1px solid transparent;
 }
 
